@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI; // Needed for displaying UI
 
 public class WeakPoint : MonoBehaviour
 {
@@ -12,6 +13,16 @@ public class WeakPoint : MonoBehaviour
     public Color lowHealthColor = Color.yellow;
 
     private SpriteRenderer sr;
+
+    // Static tracking variables
+    private static int totalWeakPoints = 0;
+    private static int destroyedWeakPoints = 0;
+
+    void Awake()
+    {
+        // Count this weak point on creation
+        totalWeakPoints++;
+    }
 
     void Start()
     {
@@ -28,7 +39,7 @@ public class WeakPoint : MonoBehaviour
         if (collision.CompareTag("Projectile"))
         {
             TakeDamage(15);
-            Destroy(collision.gameObject); // ? This destroys the projectile
+            Destroy(collision.gameObject);
         }
     }
 
@@ -40,7 +51,13 @@ public class WeakPoint : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject); // Destroy weak point when health reaches 0
+            Destroy(gameObject);
+            destroyedWeakPoints++;
+
+            if (destroyedWeakPoints >= totalWeakPoints)
+            {
+                YouWin();
+            }
         }
     }
 
@@ -57,5 +74,20 @@ public class WeakPoint : MonoBehaviour
             else
                 sr.color = defaultColor;
         }
+    }
+
+    void YouWin()
+    {
+        Debug.Log("You Win!");
+
+        // Optional: Show a message on screen
+        // You can also load a win screen, pause game, etc.
+        // Time.timeScale = 0f; // freeze game if desired
+    }
+
+    void OnDestroy()
+    {
+        // Clean up in case the object is manually removed
+        totalWeakPoints = Mathf.Max(totalWeakPoints - 1, 0);
     }
 }

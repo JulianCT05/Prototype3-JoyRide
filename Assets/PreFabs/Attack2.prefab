@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2195953794301308520}
   - component: {fileID: 9005857175749779066}
   - component: {fileID: 593886891071768842}
+  - component: {fileID: 8950366684899564328}
   m_Layer: 8
   m_Name: Attack (1)
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -118,7 +119,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -134,6 +135,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8950366684899564328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987904459123261567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558f7f75050df7847a7da7af73257f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2414245951895519199
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,9 +158,10 @@ GameObject:
   - component: {fileID: 1063067964949117829}
   - component: {fileID: 3401619117189951086}
   - component: {fileID: 6668190114741124697}
+  - component: {fileID: 759731216977149008}
   m_Layer: 8
   m_Name: Attack
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -252,7 +266,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -268,6 +282,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &759731216977149008
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2414245951895519199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 558f7f75050df7847a7da7af73257f42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7609665990847965150
 GameObject:
   m_ObjectHideFlags: 0
@@ -278,9 +304,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8431303639050680100}
   - component: {fileID: 2440888317275950987}
+  - component: {fileID: -4429592916879882197}
   m_Layer: 8
   m_Name: Attack2
-  m_TagString: Untagged
+  m_TagString: Attack
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,3 +356,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
+--- !u!114 &-4429592916879882197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609665990847965150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e5b35139a683b4bb9e4084c100c909, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

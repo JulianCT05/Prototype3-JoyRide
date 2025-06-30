@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Destruction : MonoBehaviour
+public class PlayerAttacked : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,12 +16,11 @@ public class Destruction : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Projectile"))
+        if (collision.CompareTag("Player"))
         {
             Destroy(collision.gameObject); // ? This destroys the projectile
         }
 
 
-    
     }
 }
